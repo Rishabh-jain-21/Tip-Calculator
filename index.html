@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIP-OR-TREAT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- header just to define the heading -->
+    <header>
+        <h1>Tip-or-Treat</h1>
+    </header>
+
+    <!-- calculator's code -->
+    <article class="calculator">
+        <div class="cal_body">
+            <div class="input-field">
+                <label for="total">Bill Total ($)</label>
+                <div>
+                    <span class="icon-styling">$</span>
+                    <input type="number" id="bill_amount">
+                </div>
+            </div>
+            <div class="input-field">
+                <label for="tip">Tip (%)</label>
+                <div>
+                    <span class="icon-styling">%</span>
+                    <input type="number" id="tip_amount">
+                </div>
+            </div>
+        </div>
+        <div class="bottom_calculator">
+            <div id="person_div">
+                <span id="decrease_person">-</span>
+                <span id="person_count">1</span>
+                <span id="increase_person">+</span>
+            </div>
+            <div style="margin-top: 10px; margin-left: 55%;">
+                <div style="display: block">
+                    Total Bill
+                </div>
+                <h2 style="margin-top: 0px;">$<span id="total_amt">0.00</span></h2>
+            </div>
+        </div>
+    </article>
+    <script src="index.js"></script>
+</body>
+
+</html>

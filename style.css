@@ -1,0 +1,96 @@
+/* using variables  */
+:root {
+  --bg: #858bea;
+  --text: #dbd8e7;
+  --calBg: #242135;
+}
+
+/* hidding input number up-down arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+}
+
+header {
+  text-align: center;
+  color: var(--calBg);
+}
+
+input {
+  background-color: #303555;
+  border: none;
+  border-radius: 10px;
+  width: 60vw;
+  height: 35px;
+  color: var(--text);
+  font-size: large;
+  padding-left: 30px;
+  margin-top: 10px;
+}
+
+label {
+  font-size: large;
+}
+
+.calculator {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: var(--bg);
+  background: var(--calBg);
+  flex-direction: column;
+  align-items: center;
+}
+
+article div input {
+  display: block;
+}
+
+.input-field {
+  margin-top: 15px;
+}
+
+.icon-styling {
+  position: absolute;
+  font-size: 21px;
+  margin-left: 13px;
+  margin-top: 7px;
+}
+
+.icon-styling:nth-child(1) {
+  font-size: 18px;
+  margin-left: 8px;
+}
+
+.bottom_calculator {
+  display: flex;
+  /* width: 100%; */
+  /* margin-left: 43%; */
+}
+
+/* styling for the person's div */
+
+#person_div {
+  display: flex;
+}
+
+#person_count {
+  color: var(--text);
+}
+
+#person_div span:nth-child(odd) {
+  cursor: pointer;
+  font-size: 22px;
+  margin-top: -3px;
+  font-weight: 900;
+}
+
+#person_div span:nth-child(2) {
+  margin-right: 10px;
+  margin-left: 10px;
+}
