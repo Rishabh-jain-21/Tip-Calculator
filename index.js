@@ -1,6 +1,10 @@
 const bill_amount = document.getElementById('bill_amount');
 const total_amt = document.getElementById('total_amt');
 const tip_amount = document.getElementById('tip_amount');
+const increase_person = document.getElementById('increase_person');
+const decrease_person = document.getElementById('decrease_person');
+const person_value = document.getElementById('person_count');
+
 let tip_to_give = 0;
 
 function show() {
@@ -12,7 +16,7 @@ function show_calculated() {
     let valuetoShow = parseInt(bill_amount.value) + tip_to_give;
 
     total_amt.innerText = isNaN(valuetoShow) ? bill_amount.value : valuetoShow;
-    total_amt.innerText = parseFloat(total_amt.innerText).toFixed(2);
+    total_amt.innerText = parseFloat(total_amt.innerText / parseInt(person_value.innerText)).toFixed(2);
 }
 
 function bill_calculate() {
@@ -25,6 +29,22 @@ function bill_calculate() {
     show_calculated();
 }
 
+function increaseCount() {
+    personCount = parseInt(person_value.innerText);
+    person_value.innerText = parseInt(personCount) + 1;
+    console.log(personCount + " " + typeof (personCount));
+    show_calculated();
+}
 
+function decreaseCount() {
+    personCount = parseInt(person_value.innerText);
+    person_value.innerText = personCount <= 1 ? parseInt(1) : parseInt(personCount - 1);
+    console.log(personCount + " " + typeof (personCount));
+    show_calculated();
+}
+
+// Event Listeners
 bill_amount.addEventListener('keyup', show);
 tip_amount.addEventListener('keyup', bill_calculate);
+decrease_person.addEventListener('click', decreaseCount);
+increase_person.addEventListener('click', increaseCount);
