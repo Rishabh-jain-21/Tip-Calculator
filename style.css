@@ -86,13 +86,56 @@ article div input {
 }
 
 #person_div span:nth-child(odd) {
+  display: flex;
   cursor: pointer;
   font-size: 22px;
   margin-top: -3px;
   font-weight: 900;
+  background-color: #858bea;
+  color: #242135;
+  padding: -15px;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 #person_div span:nth-child(2) {
   margin-right: 10px;
   margin-left: 10px;
+}
+
+#total_bill_styling {
+  margin-top: 10px;
+  margin-left: 244%;
+}
+
+/* responsiveness */
+@media screen and (max-width: 1000px) {
+  #total_bill_styling {
+    margin-top: 10px;
+    margin-left: 200%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #total_bill_styling {
+    margin-top: 10px;
+    margin-left: 180%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #total_bill_styling {
+    margin-top: 10px;
+    margin-left: 160%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #total_bill_styling {
+    margin-top: 10px;
+    margin-left: 140%;
+  }
 }
