@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIP-OR-TREAT</title>
+    <title>TIP-Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -35,19 +35,28 @@
             </div>
         </div>
         <div class="bottom_calculator">
-            <div id="person_div">
-                <span id="decrease_person"><b>-</b></span>
-                <span id="person_count">1</span>
-                <span id="increase_person"> <b>+</b> </span>
+            <div id="person_main">
+                <span class="person_name">Person Count</span>
+                <div id="person_div">
+                    <span id="decrease_person"><b>-</b></span>
+                    <span id="person_count">1</span>
+                    <span id="increase_person"> <b>+</b> </span>
+                </div>
             </div>
             <div id="total_bill_styling">
-                <div style="display: block">
+                <div style="display: block; width: 80px">
                     Total Bill
                 </div>
                 <h2 style="margin-top: 0px;">$<span id="total_amt">0.00</span></h2>
             </div>
         </div>
     </article>
+    <div class="center middle none" id="pop_up_1">
+        <div class="pop_up">
+            <h2>Please Enter some valid bill amount</h2>
+            <button id="close_popup">OKAY</button>
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
 

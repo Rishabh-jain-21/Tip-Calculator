@@ -69,20 +69,24 @@ article div input {
 
 .bottom_calculator {
   display: flex;
-  width: 20%;
-  /* margin-left: 43%; */
+  width: 63%;
+  justify-content: space-between;
 }
 
 /* styling for the person's div */
 
 #person_div {
   display: flex;
-  margin-left: -100%;
-  margin-top: 30px;
+  margin-left: -13%;
+  margin-top: 8px;
 }
 
 #person_count {
   color: var(--text);
+}
+
+.person_name {
+  width: 100px;
 }
 
 #person_div span:nth-child(odd) {
@@ -106,36 +110,48 @@ article div input {
   margin-left: 10px;
 }
 
+#person_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #total_bill_styling {
-  margin-top: 10px;
-  margin-left: 244%;
+  margin-top: 20px;
 }
 
-/* responsiveness */
-@media screen and (max-width: 1000px) {
-  #total_bill_styling {
-    margin-top: 10px;
-    margin-left: 200%;
-  }
+/* pop up box */
+.pop_up {
+  display: inline-block;
+  border: 2px solid white;
+  padding: 10px 30px 20px 30px;
+  /* margin-left: 35%; */
+  border-radius: 10px;
+  background-color: #302957;
+  color: var(--bg);
 }
-
-@media screen and (max-width: 600px) {
-  #total_bill_styling {
-    margin-top: 10px;
-    margin-left: 180%;
-  }
+.pop_up button {
+  background-color: #858bea;
+  color: #242135;
+  font-weight: 600;
+  padding: 5px 15px;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
-@media screen and (max-width: 450px) {
-  #total_bill_styling {
-    margin-top: 10px;
-    margin-left: 160%;
-  }
+.pop_up button:hover {
+  opacity: 0.6;
+  transition: all 0.3s;
 }
-
-@media screen and (max-width: 350px) {
-  #total_bill_styling {
-    margin-top: 10px;
-    margin-left: 140%;
-  }
+.center {
+  display: flex;
+  justify-content: center;
+}
+.middle {
+  margin-top: -12%;
+  z-index: 100;
+}
+.none {
+  display: none;
 }

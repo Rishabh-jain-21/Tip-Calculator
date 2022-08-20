@@ -4,6 +4,8 @@ const tip_amount = document.getElementById('tip_amount');
 const increase_person = document.getElementById('increase_person');
 const decrease_person = document.getElementById('decrease_person');
 const person_value = document.getElementById('person_count');
+const pop_up = document.getElementById('pop_up_1');
+const closePopUp = document.getElementById('close_popup');
 
 let tip_to_give = 0;
 
@@ -21,10 +23,11 @@ function show_calculated() {
 
 function bill_calculate() {
     if (bill_amount.value == '') {
-        alert('Please Enter some bill amount');
+        // alert('Please Enter some valid bill amount');
+        pop_up.classList.remove('none');
         return;
     }
-    tip_to_give = (parseInt(bill_amount.value) / 100) * parseInt(tip_amount.value);
+    tip_to_give = (parseFloat(bill_amount.value) / 100) * parseFloat(tip_amount.value);
     // console.log('chalgya bhai' + bill_amount.value);
     show_calculated();
 }
@@ -43,8 +46,13 @@ function decreaseCount() {
     show_calculated();
 }
 
+function hidePopUp() {
+    pop_up.classList.add('none');
+}
+
 // Event Listeners
 bill_amount.addEventListener('keyup', show);
 tip_amount.addEventListener('keyup', bill_calculate);
 decrease_person.addEventListener('click', decreaseCount);
 increase_person.addEventListener('click', increaseCount);
+closePopUp.addEventListener('click', hidePopUp);
